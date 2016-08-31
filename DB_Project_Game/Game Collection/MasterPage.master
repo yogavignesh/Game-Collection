@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Game_Collection_MasterPage" Codebehind="MasterPage.master.cs" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home</title>
+    <link href="../styles/MasterStyle.css" rel="stylesheet" title="Default Style"/>
+    <link href="../styles/jquery-ui.css" rel="stylesheet" />
+    <link href="../styles/jquery-ui.min.css" rel="stylesheet" />
+ 
+   
+    <script src="../Scripts/jquery-1.10.2.js"></script>    
+    <script src="../Scripts/jquery-ui.js"></script>
+    <script src="../Scripts/jquery-ui.min.js"></script>
+    
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    
+   
+</head>
+<body id="index" class="home" >
+ <header class="body">
+
+ <div id="banner"> <h1><a href="Home.aspx">My Game Collection <strong> Directory of my games</strong></a></h1></div>
+
+  <nav id="menu" class="menu"><ul id="drop-nav">
+    <li id="Home_Page"><a href="Home.aspx" >Home</a></li>
+    <li><a href="#">Consoles <span class="arrow">&#9660;</a>
+
+         <ul class="sub-menu" id="con_ddl" runat="server">
+
+        </ul>
+    </li>
+ 
+    <li id="Game_Category"><a href="#" >Category <span class="arrow">&#9660;</a>
+        <ul class="sub-menu" id="cat_ddl" runat="server">
+
+        </ul>
+     </li>
+
+
+    <li id="Query_Page"><a href="Current_Details.aspx">Search Games</a></li>
+      <li id="Add_Game"><a href="Add_Game.aspx">New Game</a></li>
+      <li id="Stats"><a href="Stats.aspx">   Statistics  </a></li>
+  </ul>
+  </nav>
+
+    </header>
+    <div class="body">
+        <asp:ContentPlaceHolder id="Main1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder id="Main2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <footer id="contentinfo" class="body">
+  <address id="about" class="vcard body">
+    <span class="primary">
+      <strong><a href="#" class="fn url">Gaming History Recorded</a></strong>
+ 
+      <span class="role">Repository of my games</span>
+    </span><!-- /.primary -->
+ 
+   
+    <span class="bio">This site gives the information about my game collection and their monetary value.The team that worked on this site is listed below</span>
+   <ul class="bio">
+       <li>Fatma Dogan (1001044920)</li>      
+       
+       <li>Sri Rama Nagabhushanam Motamarri (1001151229)</li>
+       <li>Vivek Vaidyanathasubramanian (1001126079)</li>
+       <li>Yoga Vignesh Surathi (1001101504)</li>
+   </ul>
+  </address><!-- /#about -->  
+</footer><!-- /#contentinfo -->
+</body>
+</html>
